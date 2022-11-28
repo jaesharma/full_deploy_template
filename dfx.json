@@ -1,0 +1,28 @@
+{
+  "canisters": {
+    "full_deploy_template_backend": {
+      "main": "src/full_deploy_template_backend/main.mo",
+      "type": "motoko"
+    },
+    "full_deploy_template_frontend": {
+      "dependencies": [
+        "full_deploy_template_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/full_deploy_template_frontend/src/index.html"
+      },
+      "source": [
+        "src/full_deploy_template_frontend/assets",
+        "dist/full_deploy_template_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "version": 1
+}
